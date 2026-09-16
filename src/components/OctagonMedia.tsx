@@ -15,11 +15,13 @@ export const OCTAGON_CLIP =
 // The shared size for a page-intro octagon that sits beside text in a plain
 // two-column grid (Production, Catalogue, and any future page following that
 // same pattern) — change it once here rather than repeating the class string
-// at each call site. The Homepage hero octagon is a structurally different
-// treatment (floated, with text wrapping around it via shape-outside at a
-// larger, breakpoint-driven size), so it deliberately doesn't use this and
-// sizes itself via its own wrapper div instead.
-export const OCTAGON_STANDARD_SIZE = "mx-auto w-full max-w-sm";
+// at each call site. Matches the same width progression as the Homepage
+// hero octagon (max-w-sm base, 480px at lg, 560px at xl) so the shape reads
+// as one consistent size across the site; the Homepage itself still sizes
+// its own wrapper div directly rather than using this constant, since it
+// additionally needs the float + shape-outside text-wrap positioning that
+// doesn't apply here.
+export const OCTAGON_STANDARD_SIZE = "mx-auto w-full max-w-sm lg:w-[480px] lg:max-w-none xl:w-[560px]";
 
 export type OctagonMediaProps = {
   /**
