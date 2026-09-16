@@ -105,7 +105,7 @@ export default function ProductionPage() {
             videoSrc="/production/hero-octagon.mp4"
             posterSrc="/production/hero-octagon-poster.jpg"
             alt="LB Global Media production showreel"
-            className="mx-auto w-full max-w-sm"
+            size="standard"
           />
         </Container>
       </section>
