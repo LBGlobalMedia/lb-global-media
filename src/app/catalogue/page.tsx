@@ -134,7 +134,9 @@ export default function CataloguePage() {
           </div>
           <p className="mt-10 text-paper/80">
             If you own the rights to an individual short film or film
-            catalogue, we would be pleased to hear from you.{" "}
+            catalogue, we would be pleased to hear from you.
+          </p>
+          <p className="mt-4 text-paper/80">
             <Link
               href="/contact?type=filmmaker"
               className="font-semibold text-gradient underline decoration-transparent hover:decoration-current"
