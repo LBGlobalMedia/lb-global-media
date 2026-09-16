@@ -195,10 +195,10 @@ export default function ProductionPage() {
               within the page's normal content width rather than full-bleed.
               Hidden below sm — the map becomes too squashed to read at
               phone widths, so the regional breakdown text carries it there. */}
-          <div className="relative mt-12 hidden aspect-[3026/1290] w-full sm:block">
+          <div className="relative mt-12 hidden aspect-[2560/1080] w-full sm:block">
             <Image
-              src="/production/footprint-map.png"
-              alt="Map of LB Global Media's international footprint across Europe, Asia, Latin America and North America, with core territories in London, Paris, Berlin, New York and Bangkok"
+              src="/production/our-global-footprint-map.png"
+              alt="Map of LB Global Media's global footprint by territory tier: Core Territories in the UK, France and Thailand; Partnership Territories in the USA, Germany, Brazil and Ecuador; and Network Territories across Latin America, Japan, Singapore, Indonesia, Malaysia, Lithuania, Poland, Serbia and Spain"
               fill
               sizes="(min-width: 1280px) 1280px, 100vw"
               className="object-contain"

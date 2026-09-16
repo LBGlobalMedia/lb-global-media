@@ -175,8 +175,8 @@ await copyTrimmed(
 
 console.log("Production:");
 copy(
-  path.join(MEDIA, "PRODUCTION", "footprint-map.png"),
-  path.join(PUBLIC, "production", "footprint-map.png")
+  path.join(MEDIA, "PRODUCTION", "our-global-footprint-map.png"),
+  path.join(PUBLIC, "production", "our-global-footprint-map.png")
 );
 copy(
   path.join(MEDIA, "PRODUCTION", "519000_IP.jpg"),
