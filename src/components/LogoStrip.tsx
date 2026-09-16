@@ -11,8 +11,8 @@ function LogoCard({ partner }: { partner: (typeof partners)[number] }) {
       }`}
     >
       <div
-        className={`logo-hover relative w-full transition-transform duration-300 ${
-          isLarge ? "h-20" : "h-14"
+        className={`logo-hover relative w-4/5 opacity-75 transition-transform duration-300 ${
+          isLarge ? "h-16" : "h-11"
         }`}
       >
         <Image
