@@ -83,7 +83,7 @@ const whatWeBring = [
 
 export default function ProductionPage() {
   return (
-    <div className="font-mono">
+    <>
       <section className="border-b rule-on-dark pb-16 pt-16 sm:pt-24">
         <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
@@ -327,6 +327,6 @@ export default function ProductionPage() {
           </div>
         </Container>
       </section>
-    </div>
+    </>
   );
 }

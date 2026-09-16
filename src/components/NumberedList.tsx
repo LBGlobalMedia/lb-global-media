@@ -13,14 +13,12 @@ export function NumberedList({
   columns = 1,
   showNumbers = true,
   titleFont = "display",
-  bodyFont,
 }: {
   items: NumberedItem[];
   tone?: "dark" | "paper";
   columns?: 1 | 2 | 3;
   showNumbers?: boolean;
   titleFont?: "display" | "mono";
-  bodyFont?: string;
 }) {
   const ruleClass = tone === "dark" ? "rule-on-dark" : "rule-on-paper";
   const numberClass = tone === "dark" ? "text-paper/30" : "text-paper-foreground/30";
@@ -55,12 +53,7 @@ export function NumberedList({
             <h3 className={`${titleFontClass} font-semibold ${hasMarker ? "mt-3" : ""} text-lg`}>
               {item.title}
             </h3>
-            <p
-              className={`mt-2 text-sm leading-relaxed ${bodyClass}`}
-              style={bodyFont ? { fontFamily: bodyFont } : undefined}
-            >
-              {item.body}
-            </p>
+            <p className={`mt-2 text-sm leading-relaxed ${bodyClass}`}>{item.body}</p>
           </li>
         );
       })}

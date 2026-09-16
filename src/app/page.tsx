@@ -152,13 +152,7 @@ export default function HomePage() {
         <Container>
           <SectionHeading eyebrow="What Drives Us" title="Our Ethos" tone="paper" />
           <div className="mt-14">
-            <NumberedList
-              items={ethos}
-              tone="paper"
-              columns={3}
-              showNumbers={false}
-              bodyFont="var(--font-lato), Arial, Helvetica, sans-serif"
-            />
+            <NumberedList items={ethos} tone="paper" columns={3} showNumbers={false} />
           </div>
           <p className="font-display mt-16 max-w-3xl text-2xl leading-snug text-paper-foreground/80">
             {site.name} is the evolution of{" "}

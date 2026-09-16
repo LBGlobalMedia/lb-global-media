@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Poppins, Montserrat, Lato } from "next/font/google";
+import { Poppins, Montserrat, Lato } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { site } from "@/lib/site";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -25,6 +20,8 @@ const montserrat = Montserrat({
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
+  // Lato on Google Fonts only ships 100/300/400/700/900 — no 500/600, unlike
+  // Montserrat. 400 covers body copy; 700 covers font-semibold/font-bold body text.
   weight: ["400", "700"],
 });
 
@@ -40,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${poppins.variable} ${montserrat.variable} ${lato.variable} h-full antialiased`}
+      className={`${poppins.variable} ${montserrat.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-ink text-paper">
         <SiteHeader />

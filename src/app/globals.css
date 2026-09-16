@@ -28,7 +28,7 @@
   --color-grad-magenta: var(--grad-magenta);
 
   --font-display: var(--font-poppins);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-lato);
   --font-mono: var(--font-montserrat);
 }
 
