@@ -17,6 +17,19 @@ export function ContactForm({ defaultType }: { defaultType: string }) {
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    // FormSubmit doesn't record a submission time itself (its own email
+    // timestamp isn't something we control), so we stamp one ourselves —
+    // in UK local time rather than UTC, with the GMT/BST offset resolved
+    // automatically for the moment of submission.
+    data.set(
+      "Submitted (UK Time)",
+      new Date().toLocaleString("en-GB", {
+        timeZone: "Europe/London",
+        dateStyle: "medium",
+        timeStyle: "short",
+      })
+    );
+
     try {
       const res = await fetch(FORMSUBMIT_ENDPOINT, {
         method: "POST",
