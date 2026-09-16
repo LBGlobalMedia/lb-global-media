@@ -202,12 +202,12 @@ export default function HomePage() {
         <Container>
           <SectionHeading eyebrow="From the Catalogue" title="Featured Titles" tone="paper" />
 
-          <div className="mt-12 flex flex-wrap justify-center gap-8">
+          <div className="mt-12 flex flex-wrap justify-center gap-12">
             {featuredTitles.map((title) => (
               <Link
                 key={title.slug}
                 href={`/catalogue/${title.slug}`}
-                className="group block w-full sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]"
+                className="group block w-full sm:w-[calc((100%_-_3rem)/2*0.88)] lg:w-[calc((100%_-_6rem)/3*0.88)]"
               >
                 <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-ink-soft">
                   <Image
