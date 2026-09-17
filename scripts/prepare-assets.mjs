@@ -368,6 +368,17 @@ const stillPicksOverrides = {
     "Like the First Time - Still 2.jpg",
     "Like the First Time - Still 3.jpg",
   ],
+  // Default alphabetical sort (Still-1, Still-10, Still-11) happened to pick
+  // three shots that all feature women, skewing away from the anthology's
+  // other segments. Swap in Still-2 (father + his gifted caretaker) and
+  // Still-3 (the "lonely man" segment) so the stills better represent the
+  // range of stories; Still-11 is kept as a strong shot from the segment
+  // that otherwise dominates this folder (Stills 4-12).
+  "an-artificial-life": [
+    "An-Artificial-Life-Still-2.jpg",
+    "An-Artificial-Life-Still-3.jpg",
+    "An-Artificial-Life-Still-11.png",
+  ],
 };
 
 function resolveStills(slug, max = 3) {
