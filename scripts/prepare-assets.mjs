@@ -183,18 +183,16 @@ copy(
   path.join(PUBLIC, "production", "masterclass-wide.jpg")
 );
 
-// Home / hero octagon placeholder video — NOT run as part of this script, since
-// it needs the `ffmpeg` binary rather than sharp. Source:
-// Media/HOME/octagon-hero-video-1.mp4.mp4 (1920x1080 h264+aac, 10.4MB, 24.5s;
-// note the accidental double ".mp4" in the filename on disk). Re-run this
-// command by hand if the source placeholder is ever replaced — it center-crops
-// the 16:9 source to a 1:1 square (matching the object-cover crop the octagon
-// already applies at render time, so no extra content is lost), downscales to
-// 720x720 (2x the largest on-screen render size, 560px, for retina), strips
-// the unused audio track (video is always muted), and adds +faststart for
-// progressive playback:
+// Home / hero octagon video — NOT run as part of this script, since it needs
+// the `ffmpeg` binary rather than sharp. Source: Media/HOME/octagon-hero-video-1-d02.mp4
+// (1920x1080 h264, 25fps, 10.6MB, 27.4s). Re-run this command by hand if the
+// source clip is ever replaced — it center-crops the 16:9 source to a 1:1
+// square (matching the object-cover crop the octagon already applies at
+// render time, so no extra content is lost), downscales to 720x720 (2x the
+// largest on-screen render size, 560px, for retina), strips the unused audio
+// track (video is always muted), and adds +faststart for progressive playback:
 //
-//   ffmpeg -i "Media/HOME/octagon-hero-video-1.mp4.mp4" \
+//   ffmpeg -i "Media/HOME/octagon-hero-video-1-d02.mp4" \
 //     -vf "crop=1080:1080:420:0,scale=720:720" \
 //     -an -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p -movflags +faststart \
 //     public/home/hero-octagon.mp4
@@ -205,28 +203,28 @@ copy(
 //   ffmpeg -ss 1 -i public/home/hero-octagon.mp4 -frames:v 1 -q:v 3 \
 //     public/home/hero-octagon-poster.jpg
 //
-// Result: 10.4MB -> 2.6MB video, plus a 78KB poster.
+// Result: 10.6MB -> 2.5MB video, plus a 17KB poster.
 //
 // Catalogue and Production hero octagons follow the identical treatment,
-// same source specs (1920x1080 h264+aac, 25fps), same crop/scale/strip/poster
+// same source specs (1920x1080 h264, 25fps), same crop/scale/strip/poster
 // commands, just different source files and output directories:
 //
-//   ffmpeg -i "Media/HOME/octagon-hero-video-2.mp4.mp4" \
+//   ffmpeg -i "Media/HOME/octagon-hero-video-2-d02.mp4" \
 //     -vf "crop=1080:1080:420:0,scale=720:720" \
 //     -an -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p -movflags +faststart \
 //     public/catalogue/hero-octagon.mp4
-//   ffmpeg -ss 3 -i public/catalogue/hero-octagon.mp4 -frames:v 1 -q:v 3 \
+//   ffmpeg -ss 10 -i public/catalogue/hero-octagon.mp4 -frames:v 1 -q:v 3 \
 //     public/catalogue/hero-octagon-poster.jpg
-//   (11.7MB -> 2.6MB; poster taken at the 3s mark rather than 1s — the 1s
-//   frame on this clip was a near-black abstract shot, not representative)
+//   (11.7MB -> 2.7MB; poster taken at the 10s mark — the 1s frame on this
+//   clip is a washed-out, abstract lens-flare shot, not representative)
 //
-//   ffmpeg -i "Media/HOME/octagon-hero-video-3.mp4.mp4" \
+//   ffmpeg -i "Media/HOME/octagon-hero-video-3-d02.mp4" \
 //     -vf "crop=1080:1080:420:0,scale=720:720" \
 //     -an -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p -movflags +faststart \
 //     public/production/hero-octagon.mp4
 //   ffmpeg -ss 1 -i public/production/hero-octagon.mp4 -frames:v 1 -q:v 3 \
 //     public/production/hero-octagon-poster.jpg
-//   (7.9MB -> 2.1MB)
+//   (10.5MB -> 3.0MB)
 
 console.log("Home / masterclass photos:");
 const MASTERCLASS = path.join(
