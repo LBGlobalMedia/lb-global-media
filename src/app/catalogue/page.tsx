@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { Eyebrow } from "@/components/Eyebrow";
 import { SectionHeading } from "@/components/SectionHeading";
 import { DotList } from "@/components/DotList";
 import { CatalogueBrowser } from "@/components/CatalogueBrowser";
@@ -49,9 +50,7 @@ export default function CataloguePage() {
       <section className="border-b rule-on-dark pb-16 pt-16 sm:pt-24">
         <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-paper/50">
-              Catalogue &amp; Titles
-            </p>
+            <Eyebrow>Catalogue &amp; Titles</Eyebrow>
             <h1 className="font-display mt-5 max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
               Curated Short Films.{" "}
               <span className="text-gradient">Feature-Length Experiences.</span>
@@ -83,9 +82,7 @@ export default function CataloguePage() {
 
       <section className="border-b rule-on-dark py-16">
         <Container>
-          <p className="font-mono text-xs uppercase tracking-widest text-paper/50">
-            Browse Our Titles
-          </p>
+          <Eyebrow>Browse Our Titles</Eyebrow>
           <div className="mt-8">
             <CatalogueBrowser titles={titles} genres={genres} />
           </div>

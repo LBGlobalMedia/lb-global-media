@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { BackToCatalogueLink } from "@/components/BackToCatalogueLink";
+import { Eyebrow } from "@/components/Eyebrow";
 import { CastCrewList } from "@/components/CastCrewList";
 import { EventGalleryLightbox } from "@/components/EventGalleryLightbox";
 import { formatSubtitleLabel, getAllTitles, getTitleBySlug } from "@/lib/titles";
@@ -59,9 +60,7 @@ export default async function TitleDetailPage({
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-paper/50">
-              {title.genres.join(" · ")}
-            </p>
+            <Eyebrow>{title.genres.join(" · ")}</Eyebrow>
             <h1 className="font-display mt-3 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl">
               {title.title}
             </h1>

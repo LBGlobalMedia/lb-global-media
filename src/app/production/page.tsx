@@ -11,6 +11,7 @@ import {
   TargetIcon,
 } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/Container";
+import { Eyebrow } from "@/components/Eyebrow";
 import { SectionHeading } from "@/components/SectionHeading";
 import { DotList } from "@/components/DotList";
 import { NumberedList } from "@/components/NumberedList";
@@ -87,9 +88,7 @@ export default function ProductionPage() {
       <section className="border-b rule-on-dark pb-16 pt-16 sm:pt-24">
         <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-paper/50">
-              Production &amp; Global Partnerships
-            </p>
+            <Eyebrow>Production &amp; Global Partnerships</Eyebrow>
             <h1 className="font-mono mt-5 max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
               {site.name} as a{" "}
               <span className="text-gradient">Global Co-Production Partner</span>
@@ -281,9 +280,7 @@ export default function ProductionPage() {
             />
           </div>
 
-          <p className="mt-10 font-mono text-xs uppercase tracking-widest text-paper-foreground/50">
-            Event Partners
-          </p>
+          <Eyebrow tone="paper" className="mt-10">Event Partners</Eyebrow>
           <ul className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm text-paper-foreground/70">
             {eventPartners.map((partner) => (
               <li key={partner}>{partner}</li>

@@ -9,6 +9,7 @@ import {
   SparkleIcon,
 } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/Container";
+import { Eyebrow } from "@/components/Eyebrow";
 import { SectionHeading } from "@/components/SectionHeading";
 import { NumberedList } from "@/components/NumberedList";
 import { LogoStrip } from "@/components/LogoStrip";
@@ -79,9 +80,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b rule-on-dark pb-24 pt-16 sm:pt-24">
         <Container>
-          <p className="font-mono text-xs uppercase tracking-widest text-paper/50">
-            International Film Production &amp; Distribution
-          </p>
+          <Eyebrow>International Film Production &amp; Distribution</Eyebrow>
           <h1 className="font-display mt-5 max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
             Global Stories.
             <br />
@@ -182,9 +181,7 @@ export default function HomePage() {
             <DotList items={partnerTypes} size="base" font="mono" />
           </div>
 
-          <p className="mt-16 font-mono text-xs uppercase tracking-widest text-paper/50">
-            Discover Some of Our Global Partners
-          </p>
+          <Eyebrow className="mt-16">Discover Some of Our Global Partners</Eyebrow>
           <div className="mt-6">
             <LogoStrip />
           </div>

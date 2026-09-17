@@ -1,3 +1,5 @@
+import { Eyebrow } from "./Eyebrow";
+
 export function SectionHeading({
   eyebrow,
   title,
@@ -11,18 +13,15 @@ export function SectionHeading({
   align?: "left" | "center";
   titleFont?: "display" | "mono";
 }) {
-  const mutedClass = tone === "dark" ? "text-paper/50" : "text-paper-foreground/70";
   const titleFontClass = titleFont === "mono" ? "font-mono" : "font-display";
 
   return (
     <div className={align === "center" ? "text-center" : ""}>
-      <div
-        className={`flex items-center gap-3 font-mono text-xs uppercase tracking-widest ${mutedClass} ${
-          align === "center" ? "justify-center" : ""
-        }`}
-      >
-        {eyebrow && <span>{eyebrow}</span>}
-      </div>
+      {eyebrow && (
+        <Eyebrow tone={tone} className={align === "center" ? "text-center" : ""}>
+          {eyebrow}
+        </Eyebrow>
+      )}
       <h2
         className={`${titleFontClass} mt-3 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl`}
       >
