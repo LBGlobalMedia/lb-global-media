@@ -184,7 +184,7 @@ copy(
 );
 
 // Home / hero octagon video — NOT run as part of this script, since it needs
-// the `ffmpeg` binary rather than sharp. Source: Media/HOME/octagon-hero-video-1-d02.mp4
+// the `ffmpeg` binary rather than sharp. Source: Media/HOME/octagon-reel-1-hero-d02.mp4
 // (1920x1080 h264, 25fps, 10.6MB, 27.4s). Re-run this command by hand if the
 // source clip is ever replaced — it center-crops the 16:9 source to a 1:1
 // square (matching the object-cover crop the octagon already applies at
@@ -192,7 +192,7 @@ copy(
 // largest on-screen render size, 560px, for retina), strips the unused audio
 // track (video is always muted), and adds +faststart for progressive playback:
 //
-//   ffmpeg -i "Media/HOME/octagon-hero-video-1-d02.mp4" \
+//   ffmpeg -i "Media/HOME/octagon-reel-1-hero-d02.mp4" \
 //     -vf "crop=1080:1080:420:0,scale=720:720" \
 //     -an -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p -movflags +faststart \
 //     public/home/hero-octagon.mp4
@@ -203,22 +203,24 @@ copy(
 //   ffmpeg -ss 1 -i public/home/hero-octagon.mp4 -frames:v 1 -q:v 3 \
 //     public/home/hero-octagon-poster.jpg
 //
-// Result: 10.6MB -> 2.5MB video, plus a 17KB poster.
+// Result: 10.6MB -> 2.6MB video, plus a 17KB poster.
 //
 // Catalogue and Production hero octagons follow the identical treatment,
 // same source specs (1920x1080 h264, 25fps), same crop/scale/strip/poster
-// commands, just different source files and output directories:
+// commands, just different source files and output directories. Despite the
+// "hero"/"catalogue"/"production" suffixes on all three source filenames,
+// each clip is used on its correspondingly-named page only:
 //
-//   ffmpeg -i "Media/HOME/octagon-hero-video-2-d02.mp4" \
+//   ffmpeg -i "Media/HOME/octagon-reel-2-catalogue-d02.mp4" \
 //     -vf "crop=1080:1080:420:0,scale=720:720" \
 //     -an -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p -movflags +faststart \
 //     public/catalogue/hero-octagon.mp4
 //   ffmpeg -ss 10 -i public/catalogue/hero-octagon.mp4 -frames:v 1 -q:v 3 \
 //     public/catalogue/hero-octagon-poster.jpg
-//   (11.7MB -> 2.7MB; poster taken at the 10s mark — the 1s frame on this
+//   (10.5MB -> 2.4MB; poster taken at the 10s mark — the 1s frame on this
 //   clip is a washed-out, abstract lens-flare shot, not representative)
 //
-//   ffmpeg -i "Media/HOME/octagon-hero-video-3-d02.mp4" \
+//   ffmpeg -i "Media/HOME/octagon-reel-3-production-d02.mp4" \
 //     -vf "crop=1080:1080:420:0,scale=720:720" \
 //     -an -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p -movflags +faststart \
 //     public/production/hero-octagon.mp4
