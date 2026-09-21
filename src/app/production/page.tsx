@@ -208,7 +208,7 @@ export default function ProductionPage() {
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
               <h3 className="font-mono text-lg font-semibold">Europe</h3>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-paper-foreground/70">
+              <ul className="mt-3 space-y-3 text-base leading-relaxed text-paper-foreground/70">
                 <li>France and UK-based operations with strong industry presence</li>
                 <li>Production foothold in Spain and Catalonia</li>
                 <li>Additional partners in Eastern Europe: Lithuania, Poland, and Serbia</li>
@@ -217,20 +217,20 @@ export default function ProductionPage() {
             </div>
             <div>
               <h3 className="font-mono text-lg font-semibold">Asia</h3>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-paper-foreground/70">
+              <ul className="mt-3 space-y-3 text-base leading-relaxed text-paper-foreground/70">
                 <li>Established industry and local connections in Thailand</li>
                 <li>Growing networks in Singapore, Japan, Indonesia, and Malaysia</li>
               </ul>
             </div>
             <div>
               <h3 className="font-mono text-lg font-semibold">Latin America</h3>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-paper-foreground/70">
+              <ul className="mt-3 space-y-3 text-base leading-relaxed text-paper-foreground/70">
                 <li>Strong networks with producers and filmmakers in Mexico, Colombia &amp; Brazil</li>
               </ul>
             </div>
             <div>
               <h3 className="font-mono text-lg font-semibold">North America</h3>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-paper-foreground/70">
+              <ul className="mt-3 space-y-3 text-base leading-relaxed text-paper-foreground/70">
                 <li>
                   The US is a major licensing territory, with global partners
                   such as Amazon and Tubi.

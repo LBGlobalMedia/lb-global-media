@@ -53,7 +53,7 @@ export function NumberedList({
             <h3 className={`${titleFontClass} font-semibold ${hasMarker ? "mt-3" : ""} text-lg`}>
               {item.title}
             </h3>
-            <p className={`mt-2 text-sm leading-relaxed ${bodyClass}`}>{item.body}</p>
+            <p className={`mt-2 text-base leading-relaxed ${bodyClass}`}>{item.body}</p>
           </li>
         );
       })}

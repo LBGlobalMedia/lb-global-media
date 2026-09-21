@@ -14,7 +14,7 @@ export function DotList({
   const textClass = tone === "dark" ? "text-paper/70" : "text-paper-foreground/70";
   const dotClass = tone === "dark" ? "bg-paper/40" : "bg-paper-foreground/40";
   const gridClass = columns === 3 ? "sm:grid-cols-3" : "";
-  const sizeClass = size === "base" ? "text-base leading-relaxed" : "text-sm";
+  const sizeClass = size === "base" ? "text-lg leading-relaxed" : "text-base leading-relaxed";
   const fontClass = font === "mono" ? "font-mono" : "";
 
   return (
